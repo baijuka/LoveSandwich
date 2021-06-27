@@ -35,6 +35,7 @@ def validate_data(values):
 
     try:
         if len(values) != 6:
+            [int(value) for value in values]
             raise ValueError(
                 f"Exactly six values required, you entered {len(values)}"
             )
